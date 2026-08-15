@@ -100,7 +100,12 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: radial-gradient(circle at 50% 32%, #8f2436 0%, #5a1526 58%, #3c0d1b 100%);
+  background: radial-gradient(
+    circle at 50% 32%,
+    #8f2436 0%,
+    #5a1526 58%,
+    #3c0d1b 100%
+  );
   transition: opacity 0.9s ease;
 }
 
@@ -174,7 +179,9 @@ a {
   justify-content: center;
   padding-top: 8%;
   z-index: 3;
-  box-shadow: inset 0 -16px 26px rgba(61, 33, 20, 0.1), 0 10px 24px rgba(32, 7, 14, 0.25);
+  box-shadow:
+    inset 0 -16px 26px rgba(61, 33, 20, 0.1),
+    0 10px 24px rgba(32, 7, 14, 0.25);
   backface-visibility: hidden;
 }
 
@@ -211,7 +218,12 @@ a {
   height: 68px;
   border-radius: 50%;
   border: none;
-  background: radial-gradient(circle at 35% 30%, #c0504f, #8f2b2b 62%, #6e2020 100%);
+  background: radial-gradient(
+    circle at 35% 30%,
+    #c0504f,
+    #8f2b2b 62%,
+    #6e2020 100%
+  );
   color: var(--c-seal-text, #f8ecd4);
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 600;
@@ -219,7 +231,10 @@ a {
   text-transform: uppercase;
   font-size: 0.7rem;
   cursor: pointer;
-  box-shadow: 0 6px 18px rgba(32, 7, 14, 0.45), inset 0 2px 6px rgba(255, 235, 200, 0.35), inset 0 -3px 8px rgba(40, 8, 8, 0.5);
+  box-shadow:
+    0 6px 18px rgba(32, 7, 14, 0.45),
+    inset 0 2px 6px rgba(255, 235, 200, 0.35),
+    inset 0 -3px 8px rgba(40, 8, 8, 0.5);
   animation: seal-pulse 2.4s ease-in-out infinite;
 }
 
@@ -233,8 +248,13 @@ a {
 }
 
 @keyframes seal-pulse {
-  0%, 100% { transform: translate(-50%, -50%) scale(1); }
-  50% { transform: translate(-50%, -50%) scale(1.06); }
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.06);
+  }
 }
 
 .intro.opened .flap-top {
@@ -244,7 +264,9 @@ a {
 .intro.opened .seal-button {
   opacity: 0;
   transform: translate(-50%, -50%) scale(0.6);
-  transition: opacity 0.4s ease, transform 0.4s ease;
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease;
   animation: none;
 }
 
@@ -280,7 +302,9 @@ a {
 .reveal {
   opacity: 0;
   transform: translateY(24px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
 }
 
 .reveal.visible {
@@ -338,7 +362,8 @@ a {
   pointer-events: none;
   filter: drop-shadow(0 4px 8px rgba(163, 110, 19, 0.3));
   z-index: 0;
-  transform: translate(0, -50%) rotate(calc(var(--fan) * var(--dir))) scaleX(var(--flip));
+  transform: translate(0, -50%) rotate(calc(var(--fan) * var(--dir)))
+    scaleX(var(--flip));
   animation: horn-pulse 2.4s ease-in-out var(--delay, 1s) infinite alternate;
 }
 
@@ -359,8 +384,14 @@ a {
 /* Yelpig'ich burchagi (--fan) va kechikish (--delay) admin'dagi karnay soniga
    qarab view'da hisoblanib, inline style orqali beriladi */
 @keyframes horn-pulse {
-  from { transform: translate(0, -50%) rotate(calc(var(--fan) * var(--dir))) scaleX(var(--flip)); }
-  to { transform: translate(var(--push), -50%) rotate(calc((var(--fan) + 3deg) * var(--dir))) scaleX(var(--flip)); }
+  from {
+    transform: translate(0, -50%) rotate(calc(var(--fan) * var(--dir)))
+      scaleX(var(--flip));
+  }
+  to {
+    transform: translate(var(--push), -50%)
+      rotate(calc((var(--fan) + 3deg) * var(--dir))) scaleX(var(--flip));
+  }
 }
 
 .heritage-photo {
@@ -472,8 +503,13 @@ a {
 }
 
 @keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(8px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
 }
 
 .letter-card {
@@ -545,7 +581,6 @@ a {
   text-align: center;
 }
 
-
 .calendar {
   max-width: 320px;
   margin: 0 auto;
@@ -593,7 +628,7 @@ a {
   height: 30px;
   border-radius: 50%;
   background: var(--c-cal-wday-bg, var(--accent));
-  color: var(--c-cal-wday-text, #fff4ea);
+  color: #fff4ea!important;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -708,7 +743,9 @@ a {
   font-size: 0.8rem;
   letter-spacing: 0.04em;
   color: var(--c-map-link, var(--accent-deep));
-  transition: background 0.2s ease, color 0.2s ease;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
 }
 
 .map-link:hover {
@@ -763,8 +800,18 @@ a {
   }
 
   /* Kalendar va manzil yonma-yon, dastur va sanoq to'liq kenglikda */
-  .calendar-section { order: 1; }
-  .location-section { order: 2; }
-  .schedule-section { order: 3; grid-column: 1 / -1; }
-  .countdown-section { order: 4; grid-column: 1 / -1; }
+  .calendar-section {
+    order: 1;
+  }
+  .location-section {
+    order: 2;
+  }
+  .schedule-section {
+    order: 3;
+    grid-column: 1 / -1;
+  }
+  .countdown-section {
+    order: 4;
+    grid-column: 1 / -1;
+  }
 }
