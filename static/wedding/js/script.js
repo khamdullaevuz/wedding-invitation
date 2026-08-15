@@ -120,7 +120,7 @@ function updateCountdown(targetWeddingDate) {
   const seconds = Math.floor((difference % ONE_MINUTE_MS) / ONE_SECOND_MS);
 
   setCountdownValues(days, hours, minutes, seconds);
-  countdownMessage.textContent = "Sizni intiqlik bilan kutamiz.";
+  countdownMessage.textContent = "Sizni intiqlik bilan kutamiz";
   return true;
 }
 
